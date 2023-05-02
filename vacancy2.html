@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Recruterra - Вакансии</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+	<link rel="stylesheet" href="style.css">
+	<link rel="shortcut icon" type="image/x-icon" href="recruterra.png" />
+	<script src="script.js" charset="utf-8"></script>
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-lg navbar-light bg-light media-header-true">
+		<div class="container d-flex justify-content-center ">
+			<a class="nav-link font-24 fontbold color-green" href="index2.html">Recruterra</a>
+			<a class="nav-link font-24 fontbold color-green dropbtn" onclick="menuDropDown()">&#9776;</a>
+			<div id="myDropdown" class="dropdown-content">
+				<a href="index2.html">Сводка</a>
+				<a href="vacancy2.html" class="color-green">Вакансии</a>
+				<a href="meeting2.html">Встречи</a>
+				<a href="#">Резюме</a>
+				<a href="#">Сообщество</a>
+				<a href="#" class="color-green">Войти</a>
+			</div>
+
+		</div>
+	</nav>
+
+	<nav class="navbar navbar-expand-lg navbar-light bg-light media-header">
+		<div class="container d-flex justify-content-center ">
+			<ul class="navbar-nav mr-auto d-flex justify-content-center align-items-center">
+				<li class="nav-item mr-right-1dot6percent">
+					<a class="nav-link font-24 fontbold color-green" href="index2.html">Recruterra</a>
+				</li>
+				<li class="nav-item mr-right-1dot6percent">
+					<a class="nav-link font-18 fontbold color-black color-green-hover" href=" index2.html">Сводка</a>
+				</li>
+				<li class="nav-item mr-right-1dot6percent">
+					<a class="nav-link font-18 fontbold color-green color-green-hover" href="vacancy2.html">Вакансии</a>
+				</li>
+				<li class="nav-item mr-right-1dot6percent">
+					<a class="nav-link font-18 fontbold color-black color-green-hover" href="meeting.html">Встречи</a>
+				</li>
+				<li class="nav-item mr-right-1dot6percent">
+					<a class="nav-link font-18 fontbold color-black color-green-hover" href="responses.html">Резюме</a>
+				</li>
+				<li class="nav-item mr-right-1dot6percent">
+					<a class="nav-link font-18 fontbold color-black color-green-hover"
+						href="articles.html">Сообщество</a>
+				</li>
+				<li class="nav-item mr-right-1dot6percent">
+					<button
+						class="btn btn-outline-primary nav-link font-18 font-bolder color-black w-200sad">Войти</button>
+				</li>
+			</ul>
+		</div>
+	</nav>
+
+	<div class="container justify-content-center mrtop16 dd-flex minheight">
+		<div class="vacancy-left">
+			<p class="font-bolder font-24 media-header-false">Фильтры</p>
+			<p class="font-bolder font-24 media-header-true dropbtn" onclick="filterDropDown()">Фильтры &#9776;</p>
+			<div id="myDropdownFilter" class="dropdown-content-filter">
+				<p class="font-bolder font-18 mrtop8 mrleft16">Уровень дохода</p>
+				<fieldset id="class1" class="mrleft16">
+					<div class="form-check">
+						<input class="form-check-input" type="radio" name="class1" id="salaryRadio1" checked>
+						<label class="form-check-label mr-left-1percent" for="salaryRadio1">Не имеет значения</label>
+					</div>
+					<div class="form-check">
+						<input class="form-check-input" type="radio" name="class1" id="salaryRadio2">
+						<label class="form-check-label mr-left-1percent" for="salaryRadio2">От 30 000 руб.</label>
+					</div>
+					<div class="form-check">
+						<input class="form-check-input" type="radio" name="class1" id="salaryRadio3">
+						<label class="form-check-label mr-left-1percent" for="salaryRadio3">От 50 000 руб.</label>
+					</div>
+					<div class="form-check">
+						<input class="form-check-input" type="radio" name="class1" id="salaryRadio4">
+						<label class="form-check-label mr-left-1percent" for="salaryRadio4">От 75 000 руб.</label>
+					</div>
+					<div class="form-check">
+						<input class="form-check-input" type="radio" name="class1" id="salaryRadio5">
+						<label class="form-check-label mr-left-1percent" for="salaryRadio5">От 95 000 руб.</label>
+					</div>
+					<div class="form-check">
+						<input class="form-check-input" type="radio" name="class1" id="salaryRadio6">
+						<label class="form-check-label mr-left-1percent" for="salaryRadio6">От 120 000 руб.</label>
+					</div>
+				</fieldset>
+
+				<p class="font-bolder font-18 mrtop8 mrleft16">Город</p>
+				<fieldset id="class2" class="mrleft16">
+					<div class="form-check">
+						<input class="form-check-input" type="radio" name="class2" id="cityRadio1" checked>
+						<label class="form-check-label mr-left-1percent" for="cityRadio1">Казань</label>
+					</div>
+					<div class="form-check">
+						<input class="form-check-input" type="radio" name="class2" id="cityRadio1">
+						<label class="form-check-label mr-left-1percent" for="cityRadio1">Москва</label>
+					</div>
+					<div class="form-check">
+						<input class="form-check-input" type="radio" name="class2" id="cityRadio1">
+						<label class="form-check-label mr-left-1percent" for="cityRadio1">Санкт-Петербург</label>
+					</div>
+				</fieldset>
+
+				<p class="font-bolder font-18 mrtop8 mrleft16">Образование</p>
+				<fieldset id="class3" class="mrleft16">
+					<div class="form-check">
+						<input class="form-check-input" value="Высшее" type="radio" name="class3" id="educationRadio1"
+							checked>
+						<label class="form-check-label mr-left-1percent" for="educationRadio1">Высшее</label>
+					</div>
+					<div class="form-check">
+						<input class="form-check-input" value="Среднее профессиональное" type="radio" name="class3"
+							id="educationRadio2">
+						<label class="form-check-label mr-left-1percent" for="educationRadio2">Среднее
+							профессиональное</label>
+					</div>
+					<div class="form-check">
+						<input class="form-check-input" value="Среднее общее" type="radio" name="class3"
+							id="educationRadio3">
+						<label class="form-check-label mr-left-1percent" for="educationRadio3">Среднее общее</label>
+					</div>
+				</fieldset>
+
+				<p class="font-bolder font-18 mrtop8 mrleft16">Опыт работы</p>
+				<fieldset id="class4" class="mrleft16">
+					<div class="form-check">
+						<input class="form-check-input" value="0" type="radio" name="class4" id="workexRadio1" checked>
+						<label class="form-check-label mr-left-1percent" for="workexRadio1">Нет опыта</label>
+					</div>
+					<div class="form-check">
+						<input class="form-check-input" value="1" type="radio" name="class4" id="workexRadio2">
+						<label class="form-check-label mr-left-1percent" for="workexRadio2">Более 1 года</label>
+					</div>
+					<div class="form-check">
+						<input class="form-check-input" value="3" type="radio" name="class4" id="workexRadio3">
+						<label class="form-check-label mr-left-1percent" for="workexRadio3">Более 3 лет</label>
+					</div>
+					<div class="form-check">
+						<input class="form-check-input" value="6" type="radio" name="class4" id="workexRadio4">
+						<label class="form-check-label mr-left-1percent" for="workexRadio4">Более 6 лет</label>
+					</div>
+				</fieldset>
+
+				<p class="font-bolder font-18 mrtop8 mrleft16">Тип занятости</p>
+				<fieldset id="class5" class="mrleft16">
+					<div class="form-check">
+						<input class="form-check-input" value="2" type="radio" name="class5" id="employmenttypeRadio1"
+							checked>
+						<label class="form-check-label mr-left-1percent" for="employmenttypeRadio1">Полная</label>
+					</div>
+					<div class="form-check">
+						<input class="form-check-input" value="1" type="radio" name="class5" id="employmenttypeRadio2">
+						<label class="form-check-label mr-left-1percent" for="employmenttypeRadio2">Частичная</label>
+					</div>
+					<div class="form-check">
+						<input class="form-check-input" value="3" type="radio" name="class5" id="employmenttypeRadio3">
+						<label class="form-check-label mr-left-1percent" for="employmenttypeRadio3">Стажировка</label>
+					</div>
+					<div class="form-check">
+						<input class="form-check-input" value="4" type="radio" name="class5" id="employmenttypeRadio4">
+						<label class="form-check-label mr-left-1percent" for="employmenttypeRadio4">Проектная
+							работа</label>
+					</div>
+				</fieldset>
+				<input type="button" class="btn btn-outline-dark w-200 mrtop16 mrleft16 mrbottom8" value="Применить"
+					onclick="FilterAccept('@Model.User.Id', this.form.class1.value, this.form.class2.value, this.form.class3.value, this.form.class4.value,this.form.class5.value)" />
+			</div>
+
+
+			<div class="media-filter-false">
+				<p class="font-bolder font-18 mrtop8">Уровень дохода</p>
+				<fieldset id="class1">
+					<div class="form-check">
+						<input class="form-check-input" type="radio" name="class1" id="salaryRadio1" checked>
+						<label class="form-check-label mr-left-1percent" for="salaryRadio1">Не имеет значения</label>
+					</div>
+					<div class="form-check">
+						<input class="form-check-input" type="radio" name="class1" id="salaryRadio2">
+						<label class="form-check-label mr-left-1percent" for="salaryRadio2">От 30 000 руб.</label>
+					</div>
+					<div class="form-check">
+						<input class="form-check-input" type="radio" name="class1" id="salaryRadio3">
+						<label class="form-check-label mr-left-1percent" for="salaryRadio3">От 50 000 руб.</label>
+					</div>
+					<div class="form-check">
+						<input class="form-check-input" type="radio" name="class1" id="salaryRadio4">
+						<label class="form-check-label mr-left-1percent" for="salaryRadio4">От 75 000 руб.</label>
+					</div>
+					<div class="form-check">
+						<input class="form-check-input" type="radio" name="class1" id="salaryRadio5">
+						<label class="form-check-label mr-left-1percent" for="salaryRadio5">От 95 000 руб.</label>
+					</div>
+					<div class="form-check">
+						<input class="form-check-input" type="radio" name="class1" id="salaryRadio6">
+						<label class="form-check-label mr-left-1percent" for="salaryRadio6">От 120 000 руб.</label>
+					</div>
+				</fieldset>
+
+				<p class="font-bolder font-18 mrtop8">Город</p>
+				<fieldset id="class2">
+					<div class="form-check">
+						<input class="form-check-input" type="radio" name="class2" id="cityRadio1" checked>
+						<label class="form-check-label mr-left-1percent" for="cityRadio1">Казань</label>
+					</div>
+					<div class="form-check">
+						<input class="form-check-input" type="radio" name="class2" id="cityRadio1">
+						<label class="form-check-label mr-left-1percent" for="cityRadio1">Москва</label>
+					</div>
+					<div class="form-check">
+						<input class="form-check-input" type="radio" name="class2" id="cityRadio1">
+						<label class="form-check-label mr-left-1percent" for="cityRadio1">Санкт-Петербург</label>
+					</div>
+				</fieldset>
+
+				<p class="font-bolder font-18 mrtop8">Образование</p>
+				<fieldset id="class3">
+					<div class="form-check">
+						<input class="form-check-input" value="Высшее" type="radio" name="class3" id="educationRadio1"
+							checked>
+						<label class="form-check-label mr-left-1percent" for="educationRadio1">Высшее</label>
+					</div>
+					<div class="form-check">
+						<input class="form-check-input" value="Среднее профессиональное" type="radio" name="class3"
+							id="educationRadio2">
+						<label class="form-check-label mr-left-1percent"
+							for="educationRadio2">Среднее<br>профессиональное</label>
+					</div>
+					<div class="form-check">
+						<input class="form-check-input" value="Среднее общее" type="radio" name="class3"
+							id="educationRadio3">
+						<label class="form-check-label mr-left-1percent" for="educationRadio3">Среднее общее</label>
+					</div>
+				</fieldset>
+
+				<p class="font-bolder font-18 mrtop8">Опыт работы</p>
+				<fieldset id="class4">
+					<div class="form-check">
+						<input class="form-check-input" value="0" type="radio" name="class4" id="workexRadio1" checked>
+						<label class="form-check-label mr-left-1percent" for="workexRadio1">Нет опыта</label>
+					</div>
+					<div class="form-check">
+						<input class="form-check-input" value="1" type="radio" name="class4" id="workexRadio2">
+						<label class="form-check-label mr-left-1percent" for="workexRadio2">Более 1 года</label>
+					</div>
+					<div class="form-check">
+						<input class="form-check-input" value="3" type="radio" name="class4" id="workexRadio3">
+						<label class="form-check-label mr-left-1percent" for="workexRadio3">Более 3 лет</label>
+					</div>
+					<div class="form-check">
+						<input class="form-check-input" value="6" type="radio" name="class4" id="workexRadio4">
+						<label class="form-check-label mr-left-1percent" for="workexRadio4">Более 6 лет</label>
+					</div>
+				</fieldset>
+
+				<p class="font-bolder font-18 mrtop8">Тип занятости</p>
+				<fieldset id="class5">
+					<div class="form-check">
+						<input class="form-check-input" value="2" type="radio" name="class5" id="employmenttypeRadio1"
+							checked>
+						<label class="form-check-label mr-left-1percent" for="employmenttypeRadio1">Полная</label>
+					</div>
+					<div class="form-check">
+						<input class="form-check-input" value="1" type="radio" name="class5" id="employmenttypeRadio2">
+						<label class="form-check-label mr-left-1percent" for="employmenttypeRadio2">Частичная</label>
+					</div>
+					<div class="form-check">
+						<input class="form-check-input" value="3" type="radio" name="class5" id="employmenttypeRadio3">
+						<label class="form-check-label mr-left-1percent" for="employmenttypeRadio3">Стажировка</label>
+					</div>
+					<div class="form-check">
+						<input class="form-check-input" value="4" type="radio" name="class5" id="employmenttypeRadio4">
+						<label class="form-check-label mr-left-1percent" for="employmenttypeRadio4">Проектная
+							работа</label>
+					</div>
+				</fieldset>
+				<input type="button" class="btn btn-outline-dark w-200 mrtop16" value="Применить"
+					onclick="FilterAccept('@Model.User.Id', this.form.class1.value, this.form.class2.value, this.form.class3.value, this.form.class4.value,this.form.class5.value)" />
+			</div>
+		</div>
+		<div class="vacancy-right">
+			<div class="vacancy-vacancy-back d-flex align-items-center">
+				<div class="vacancy-back-left mr-right-1dot6percent">
+					<div class="media-wrap-text align-items-center">
+						<p class="mr-right-1dot6percent font-bolder">Программист C# (Middle-разработчик)</p>
+						<p class="">80000 руб.</p>
+					</div>
+					<div class="media-wrap-text align-items-center">
+						<p class="mr-right-1dot6percent">Опыт: от 3 лет</p>
+						<p class="mr-right-1dot6percent">Полная занятость</p>
+						<p class="">Казань</p>
+					</div>
+					<br>
+					<p class="media-font-lower">Основные задачи: Сопровождение и доработка существующих проектов.<br>
+						Наши ожидания: Образование: высшее техническое или последний курс; Знание WPF Framework 4.8,
+						WCF;
+						Обучаемость...</p>
+				</div>
+				<div class="vacancy-back-right">
+					<a href="" class="btn btn-outline-primary nav-link font-18 color-2c2c2c">Отклик</a>
+				</div>
+			</div>
+
+			<div class="vacancy-vacancy-back d-flex align-items-center mrtop16">
+				<div class="vacancy-back-left mr-right-1dot6percent">
+					<div class="media-wrap-text align-items-center">
+						<p class="mr-right-1dot6percent font-bolder">Программист C# (Middle-разработчик)</p>
+						<p class="">80000 руб.</p>
+					</div>
+					<div class="media-wrap-text align-items-center">
+						<p class="mr-right-1dot6percent">Опыт: от 3 лет</p>
+						<p class="mr-right-1dot6percent">Полная занятость</p>
+						<p class="">Казань</p>
+					</div>
+					<br>
+					<p class="media-font-lower">Основные задачи: Сопровождение и доработка существующих проектов.<br>
+						Наши ожидания: Образование: высшее техническое или последний курс; Знание WPF Framework 4.8,
+						WCF;
+						Обучаемость...</p>
+				</div>
+				<div class="vacancy-back-right">
+					<a href="" class="btn btn-outline-primary nav-link font-18 color-2c2c2c">Отклик</a>
+				</div>
+
+			</div>
+
+			<div class="vacancy-vacancy-back d-flex align-items-center mrtop16">
+				<div class="vacancy-back-left mr-right-1dot6percent">
+					<div class="media-wrap-text align-items-center">
+						<p class="mr-right-1dot6percent font-bolder">Программист C# (Middle-разработчик)</p>
+						<p class="">80000 руб.</p>
+					</div>
+					<div class="media-wrap-text align-items-center">
+						<p class="mr-right-1dot6percent">Опыт: от 3 лет</p>
+						<p class="mr-right-1dot6percent">Полная занятость</p>
+						<p class="">Казань</p>
+					</div>
+					<br>
+					<p>Основные задачи: Сопровождение и доработка существующих проектов.<br>
+						Наши ожидания: Образование: высшее техническое или последний курс; Знание WPF Framework 4.8,
+						WCF;
+						Обучаемость...</p>
+				</div>
+				<div class="vacancy-back-right">
+					<a href="" class="btn btn-outline-primary nav-link font-18 color-2c2c2c">Отклик</a>
+				</div>
+
+			</div>
+
+			<div class="vacancy-vacancy-back d-flex align-items-center mrtop16">
+				<div class="vacancy-back-left mr-right-1dot6percent">
+					<div class="media-wrap-text align-items-center">
+						<p class="mr-right-1dot6percent font-bolder">Программист C# (Middle-разработчик)</p>
+						<p class="">80000 руб.</p>
+					</div>
+					<div class="media-wrap-text align-items-center">
+						<p class="mr-right-1dot6percent">Опыт: от 3 лет</p>
+						<p class="mr-right-1dot6percent">Полная занятость</p>
+						<p class="">Казань</p>
+					</div>
+					<br>
+					<p>Основные задачи: Сопровождение и доработка существующих проектов.<br>
+						Наши ожидания: Образование: высшее техническое или последний курс; Знание WPF Framework 4.8,
+						WCF;
+						Обучаемость...</p>
+				</div>
+				<div class="vacancy-back-right">
+					<a href="" class="btn btn-outline-primary nav-link font-18 color-2c2c2c">Отклик</a>
+				</div>
+
+			</div>
+
+			<div class="vacancy-vacancy-back d-flex align-items-center mrtop16">
+				<div class="vacancy-back-left mr-right-1dot6percent">
+					<div class="media-wrap-text align-items-center">
+						<p class="mr-right-1dot6percent font-bolder">Программист C# (Middle-разработчик)</p>
+						<p class="">80000 руб.</p>
+					</div>
+					<div class="media-wrap-text align-items-center">
+						<p class="mr-right-1dot6percent">Опыт: от 3 лет</p>
+						<p class="mr-right-1dot6percent">Полная занятость</p>
+						<p class="">Казань</p>
+					</div>
+					<br>
+					<p>Основные задачи: Сопровождение и доработка существующих проектов.<br>
+						Наши ожидания: Образование: высшее техническое или последний курс; Знание WPF Framework 4.8,
+						WCF;
+						Обучаемость...</p>
+				</div>
+				<div class="vacancy-back-right">
+					<a href="" class="btn btn-outline-primary nav-link font-18 color-2c2c2c">Отклик</a>
+				</div>
+
+			</div>
+
+			<div class="vacancy-vacancy-back d-flex align-items-center mrtop16">
+				<div class="vacancy-back-left mr-right-1dot6percent">
+					<div class="media-wrap-text align-items-center">
+						<p class="mr-right-1dot6percent font-bolder">Программист C# (Middle-разработчик)</p>
+						<p class="">80000 руб.</p>
+					</div>
+					<div class="media-wrap-text align-items-center">
+						<p class="mr-right-1dot6percent">Опыт: от 3 лет</p>
+						<p class="mr-right-1dot6percent">Полная занятость</p>
+						<p class="">Казань</p>
+					</div>
+					<br>
+					<p>Основные задачи: Сопровождение и доработка существующих проектов.<br>
+						Наши ожидания: Образование: высшее техническое или последний курс; Знание WPF Framework 4.8,
+						WCF;
+						Обучаемость...</p>
+				</div>
+				<div class="vacancy-back-right">
+					<a href="" class="btn btn-outline-primary nav-link font-18 color-2c2c2c">Отклик</a>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<footer id="footer" class="footer-1 mrtop32">
+		<div class="main-footer widgets-dark typo-light">
+			<div class="container">
+				<div class="row">
+
+					<div class="col-xs-12 col-sm-6 col-md-3">
+						<div class="widget subscribe no-box">
+							<h5 class="widget-title">Recruterra<span></span></h5>
+							<p>Онлайн сервис рекрутинга</p>
+						</div>
+					</div>
+
+					<div class="col-xs-12 col-sm-6 col-md-3">
+						<div class="widget no-box">
+							<h5 class="widget-title">Поддержка<span></span></h5>
+							<ul class="thumbnail-widget">
+								<li>
+									<div class="thumb-content"><a href="#.">support@recruterra</a></div>
+								</li>
+								<li>
+									<div class="thumb-content"><a href="#.">8 (905) 020-99-52</a></div>
+								</li>
+								<li>
+									<div class="thumb-content"><a href="#.">FAQs</a></div>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="col-xs-12 col-sm-6 col-md-3">
+						<div class="widget no-box">
+							<h5 class="widget-title">Начать<span></span></h5>
+							<p>Получить полный доступ к системе</p>
+							<a class="underline color-2c2c2c" href="#" target="_blank">Войти</a>
+						</div>
+					</div>
+
+					<div class="col-xs-12 col-sm-6 col-md-3">
+
+						<div class="widget no-box">
+							<h5 class="widget-title">Контакты<span></span></h5>
+
+							<p><a href="mailto:info@domain.com" title="glorythemes"
+									class="color-2c2c2c">support@recruterra.com</a></p>
+							<ul class="social-footer2">
+								<li class=""><a title="instagram" target="_blank" href="#"><img alt="youtube" width="30"
+											height="30" src="instagram.png"></a>
+								</li>
+								<li class=""><a href="https://www.facebook.com/" target="_blank" title="Facebook"><img
+											alt="Facebook" width="30" height="30" src="twitter.png"></a>
+								</li>
+								<li class=""><a href="https://twitter.com" target="_blank" title="Twitter"><img
+											alt="Twitter" width="30" height="30" src="facebook.png"></a>
+								</li>
+								<li class=""><a title="instagram" target="_blank" href="https://www.instagram.com/"><img
+											alt="instagram" width="30" height="30" src="telegram.png"></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</footer>
+</body>
+
+</html>
